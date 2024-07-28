@@ -1,0 +1,35 @@
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <display-name>AstonRESTservice</display-name>
+
+    <servlet>
+        <servlet-name>BookServlet</servlet-name>
+        <servlet-class>servlets.BooksServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookServlet</servlet-name>
+        <url-pattern>/books</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BookSetServlet</servlet-name>
+        <servlet-class>servlets.BookSetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookSetServlet</servlet-name>
+        <url-pattern>/booksets</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ReadersServlet</servlet-name>
+        <servlet-class>servlets.ReadersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReadersServlet</servlet-name>
+        <url-pattern>/readers/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>
