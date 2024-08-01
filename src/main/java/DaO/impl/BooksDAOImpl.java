@@ -1,6 +1,8 @@
 package DaO.impl;
 
 import DaO.BooksDAO;
+import DaO.BooksSetDAO;
+import model.BookSet;
 import model.Books;
 import logic.Logic;
 
@@ -11,9 +13,8 @@ import java.util.List;
 public class BooksDAOImpl extends Logic implements BooksDAO {
 
     Connection connection = getConnection();
-    public BooksDAOImpl(Connection connection) {
-        this.connection = connection;
-    }
+
+   public BooksDAOImpl(Connection connection) {this.connection = connection;}
 
         @Override
     public void addBook(Books book) throws SQLException {
@@ -23,6 +24,7 @@ public class BooksDAOImpl extends Logic implements BooksDAO {
             preparedStatement.setString(2, book.getTitle());
             preparedStatement.executeUpdate();
         }
+
     }
 
     @Override

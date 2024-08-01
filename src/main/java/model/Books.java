@@ -1,10 +1,11 @@
 package model;
 
-import java.util.Objects;
+import java.util.*;
 
 public class Books {
     private int bookId;
     private String title;
+    private List<BookSet> bookSet = new ArrayList<>();
 
 
     public Books() {}
@@ -12,7 +13,6 @@ public class Books {
     public int getBookId() {
         return bookId;
     }
-
     public void setBookId(int id) {
         this.bookId = id;
     }
@@ -20,10 +20,12 @@ public class Books {
     public String getTitle() {
         return title;
     }
-
     public void setTitle(String title) {
         this.title = title;
     }
+
+    public void setBookSet(List<BookSet> bookSet){this.bookSet = bookSet;}
+    public List<BookSet> getBookSet(){return bookSet;}
 
     @Override
     public boolean equals(Object o) {
