@@ -9,6 +9,7 @@ public class BookSet {
     private int setId;
     private String setName;
     private List<Books> books = new ArrayList<>();
+    private List<Readers> readers = new ArrayList<>();
 
     public BookSet(){}
 
@@ -28,6 +29,9 @@ public class BookSet {
 
     public List<Books> getBooks() {return books;}
     public void setBooks(List<Books> books) {this.books = books;}
+
+    public List<Readers> getReaders() {return readers;}
+    public void setReaders(List<Readers> readers) {this.readers = readers;}
 
     @Override
     public boolean equals(Object o) {
